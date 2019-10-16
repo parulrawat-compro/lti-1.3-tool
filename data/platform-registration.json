@@ -1,9 +1,9 @@
 [
     {
-        "client_id": "h64D1oFIGDjAzP7",
-        "oidc_auth_url":  "https://comprohighschool.moodlecloud.com/mod/lti/auth.php",
-        "public_key":   "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqrMF/Rk/ns2GNPjwp0xn\nO9+6+u5M+kss1vjC/61WkteZCEuH5aC0Tg94VDbQDQg0Ho9S2Mh70y2J8spYG73P\n94E3Zb9Yi/96O76aMusOmrWKmJDzuWQhWZqdNYkGA3sL8X9nadsWZFRvyO0ZFCqR\nOeF12nCje30LYbpNwixvhD7a0y5sia9IyUH3cBBIlQueCY8r1/OzKVSjWY4rNCyZ\nLnhhsKNuOmaMRUC8lDYRhOgNyHTqcEPTTaR4nQZJddaN+SJJybmyVFO1RJAxc0gj\nLKEG/IrFv3dWZsi5bLAJYqowC9rGU8v/g8cmLZIt02/b0du1mkUNlQrv/yxlYiqt\nxwIDAQAB\n-----END PUBLIC KEY-----",
-        "deployment_id":  "1",
+        "client_id": "vjMjXo4dIYQzBPy",
+        "oidc_auth_url":  "https://test-lti.moodlecloud.com/mod/lti/auth.php",
+        "public_key":   "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArtfaKSIsb8w9imQ4Ne6y\nllbr+1LXrt1K67Fj1bpycZCkGef4nTc4pfXrAxynF2lnUgHeBkkpF3jd+woS44r3\nyTtBOiZype/Nuq/xuOxHGNTLc0FkFBoEMHzFUb4McI1NwA+TJCUzwLC2okUaOzQQ\nnxCE+am6VIyuEzcf3tv8kV7iKI7cg9cSnf5FXaxl1MsGjflf8MBKnE8/Uq7UKPov\nJhPb+4ack3UUCTxgrf9CJD9FvtOmL9MPivP0dsLosxOFZQACWI0qZYwGQSX4blF0\nzU6xM8oFPXWkjteDNEC0kHVltD6rCMVfCSvcbvGjuVuNUb87lVq6/48Pp91N4bCA\nhwIDAQAB\n-----END PUBLIC KEY-----",
+        "deployment_id":  "4",
         "tool_link_url":  "https://lti-1-3-tool.herokuapp.com/launch"
     }
 ]
