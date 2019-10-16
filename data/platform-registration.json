@@ -1,9 +1,9 @@
 [
     {
         "client_id": "h64D1oFIGDjAzP7",
-        "oidc_auth_url":  "https://lti-ri.imsglobal.org/platforms/524/authorizations/new",
+        "oidc_auth_url":  "https://comprohighschool.moodlecloud.com/mod/lti/auth.php",
         "public_key":   "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqrMF/Rk/ns2GNPjwp0xn\nO9+6+u5M+kss1vjC/61WkteZCEuH5aC0Tg94VDbQDQg0Ho9S2Mh70y2J8spYG73P\n94E3Zb9Yi/96O76aMusOmrWKmJDzuWQhWZqdNYkGA3sL8X9nadsWZFRvyO0ZFCqR\nOeF12nCje30LYbpNwixvhD7a0y5sia9IyUH3cBBIlQueCY8r1/OzKVSjWY4rNCyZ\nLnhhsKNuOmaMRUC8lDYRhOgNyHTqcEPTTaR4nQZJddaN+SJJybmyVFO1RJAxc0gj\nLKEG/IrFv3dWZsi5bLAJYqowC9rGU8v/g8cmLZIt02/b0du1mkUNlQrv/yxlYiqt\nxwIDAQAB\n-----END PUBLIC KEY-----",
         "deployment_id":  "1",
-        "tool_link_url":  "https://lti-1-3-tool.herokuapp.com/launch" 
+        "tool_link_url":  "https://lti-1-3-tool.herokuapp.com/launch"
     }
 ]
