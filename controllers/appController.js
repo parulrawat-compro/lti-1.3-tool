@@ -13,7 +13,7 @@ exports.homeController = (req, res)=>{
 
 exports.loginController = (req, res) => {
     let platform = platformData.find((platform) => {
-        return platform.client_id == req.body.client_id;
+        return platform;
     })
 
     if (!platform) {
