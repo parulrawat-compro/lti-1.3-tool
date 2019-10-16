@@ -9,4 +9,8 @@ router.post('/launch', controller.validateLaunch);
 
 router.get('/launch', controller.launchTool);
 
+router.get('/activity', controller.activity);
+
+router.get('/list-item-service', controller.listItemService)
+
 module.exports = router;

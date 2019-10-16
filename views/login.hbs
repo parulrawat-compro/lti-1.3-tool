@@ -14,15 +14,10 @@
 </ul>
 <br>
 <br>
-<button onclick="submitForm()">Perform Launch</button>
+<button onclick="location.href='/activity'">Perform Launch</button>
 
 <form id="form" action="{{action}}">
 {{#each paramsToSend}}
     <input name="{{@key}}" value="{{this}}" type="hidden"></input>
 {{/each}}
 </form>
-<script>
-    function submitForm() {
-        document.getElementById("form").submit();
-    }
-</script>

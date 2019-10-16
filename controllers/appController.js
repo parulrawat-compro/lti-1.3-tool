@@ -90,3 +90,12 @@ exports.launchTool = (req, res) => {
         params: req.query
     });
 }
+
+exports.activity = (req, res) => {
+    return res.render('activity.hbs');
+}
+
+
+exports.listItemService = (req,res) => {
+
+}
