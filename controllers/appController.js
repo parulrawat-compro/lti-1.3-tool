@@ -12,9 +12,7 @@ exports.homeController = (req, res)=>{
 }
 
 exports.loginController = (req, res) => {
-    let platform = platformData.find((platform) => {
-        return platform;
-    })
+    let platform = platformData[0]
 
     if (!platform) {
         return res.render('error.hbs', {
