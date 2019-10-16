@@ -73,7 +73,7 @@ exports.validateLaunch = (req, res) => {
                 invalidToken: true
             });
         }
-        if (decoded["https://purl.imsglobal.org/spec/lti/claim/message_type"] != "LtiResourceLinkRequest" || decoded["https://purl.imsglobal.org/spec/lti/claim/version"] != "1.3.0" || decoded["https://purl.imsglobal.org/spec/lti/claim/deployment_id"] != loggedinPlatform.deployment_id || decoded["https://purl.imsglobal.org/spec/lti/claim/target_link_uri"] != loggedinPlatform.tool_link_url || !(decoded["https://purl.imsglobal.org/spec/lti/claim/resource_link"]) || !(decoded["https://purl.imsglobal.org/spec/lti/claim/roles"])) {
+        if (decoded["https://purl.imsglobal.org/spec/lti/claim/message_type"] != "LtiResourceLinkRequest" || decoded["https://purl.imsglobal.org/spec/lti/claim/version"] != "1.3.0" || decoded["https://purl.imsglobal.org/spec/lti/claim/deployment_id"] != '4' || decoded["https://purl.imsglobal.org/spec/lti/claim/target_link_uri"] != 'https://lti-1-3-tool.herokuapp.com/launch' || !(decoded["https://purl.imsglobal.org/spec/lti/claim/resource_link"]) || !(decoded["https://purl.imsglobal.org/spec/lti/claim/roles"])) {
             return res.render('error.hbs', {
                 badRequest: true
             });
