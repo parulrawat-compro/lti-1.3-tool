@@ -3,7 +3,7 @@ const controller = require('./controllers/appController')
 
 router.get('/', controller.homeController);
 
-router.get('/initiate_login', controller.loginController);
+router.post('/initiate_login', controller.loginController);
 
 router.post('/launch', controller.validateLaunch);
 

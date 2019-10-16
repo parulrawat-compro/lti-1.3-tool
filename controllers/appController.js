@@ -11,10 +11,9 @@ exports.homeController = (req, res)=>{
     })
 }
 
-exports.loginController = (req, res) => {debugger;
-
+exports.loginController = (req, res) => {
     let platform = platformData.find((platform) => {
-        return platform.client_id == req.query.client_id;
+        return platform.client_id == req.body.client_id;
     })
 
     if (!platform) {
@@ -26,8 +25,8 @@ exports.loginController = (req, res) => {debugger;
 
     let paramsToSend = {
         "client_id":  platform.client_id,
-        "login_hint": req.query.login_hint,
-        "lti_message_hint": req.query.lti_message_hint,
+        "login_hint": req.body.login_hint,
+        "lti_message_hint": req.body.lti_message_hint,
         "nonce":  nonce(20),
         "prompt": "none",
         "redirect_uri": toolData.launch_url,
@@ -40,13 +39,13 @@ exports.loginController = (req, res) => {debugger;
         "tool_id": 536,
         "state_nonce": paramsToSend.nonce,
         "params": {
-          "iss": req.query.iss,
-          "client_id": req.query.client_id,
-          "lti_deployment_id": req.query.lti_deployment_id,
+          "iss": req.body.iss,
+          "client_id": req.body.client_id,
+          "lti_deployment_id": req.body.lti_deployment_id,
           "target_link_uri": toolData.launch_url,
-          "login_hint": req.query.login_hint,
-          "lti_message_hint": req.query.lti_message_hint,
-          "commit": req.query.commit,
+          "login_hint": req.body.login_hint,
+          "lti_message_hint": req.body.lti_message_hint,
+          "commit": req.body.commit,
           "controller": "lti/login_initiations",
           "action": "create",
           "tool_id": "536"
@@ -62,7 +61,7 @@ exports.loginController = (req, res) => {debugger;
       paramsToSend.state = jwt.sign(payload, toolData.private_key, { algorithm: 'RS256', keyid:nonce(20)});
     
       return res.render('login.hbs', {
-          receivedParams: req.query,
+          receivedParams: req.body,
           paramsToSend: paramsToSend,
           action: platform.oidc_auth_url  
       });
@@ -70,7 +69,7 @@ exports.loginController = (req, res) => {debugger;
     }
 
 exports.validateLaunch = (req, res) => {
-    jwt.verify(req.query.id_token, loggedinPlatform.public_key, (err, decoded) => {
+    jwt.verify(req.body.id_token, loggedinPlatform.public_key, (err, decoded) => {
         if (err) {
             return res.render('error.hbs', {
                 invalidToken: true
