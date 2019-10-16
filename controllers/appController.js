@@ -67,7 +67,7 @@ exports.loginController = (req, res) => {
     }
 
 exports.validateLaunch = (req, res) => {
-    jwt.verify(req.body.id_token, loggedinPlatform.public_key, (err, decoded) => {
+    jwt.verify(req.body.id_token, '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArtfaKSIsb8w9imQ4Ne6y\nllbr+1LXrt1K67Fj1bpycZCkGef4nTc4pfXrAxynF2lnUgHeBkkpF3jd+woS44r3\nyTtBOiZype/Nuq/xuOxHGNTLc0FkFBoEMHzFUb4McI1NwA+TJCUzwLC2okUaOzQQ\nnxCE+am6VIyuEzcf3tv8kV7iKI7cg9cSnf5FXaxl1MsGjflf8MBKnE8/Uq7UKPov\nJhPb+4ack3UUCTxgrf9CJD9FvtOmL9MPivP0dsLosxOFZQACWI0qZYwGQSX4blF0\nzU6xM8oFPXWkjteDNEC0kHVltD6rCMVfCSvcbvGjuVuNUb87lVq6/48Pp91N4bCA\nhwIDAQAB\n-----END PUBLIC KEY-----', (err, decoded) => {
         if (err) {
             return res.render('error.hbs', {
                 invalidToken: true
