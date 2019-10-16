@@ -1,0 +1,28 @@
+<p>Parameters Received</p>
+<ul>
+{{#each receivedParams}}
+    <li>{{@key}} : {{this}}</li>
+{{/each}}
+</ul>
+<br>
+<br>
+<p>Query Parameters to send to platform's OIDC end-point</p>
+<ul>
+{{#each paramsToSend}}
+    <li>{{@key}} : {{this}}</li>
+{{/each}}
+</ul>
+<br>
+<br>
+<button onclick="submitForm()">Perform Launch</button>
+
+<form id="form" action="{{action}}">
+{{#each paramsToSend}}
+    <input name="{{@key}}" value="{{this}}" type="hidden"></input>
+{{/each}}
+</form>
+<script>
+    function submitForm() {
+        document.getElementById("form").submit();
+    }
+</script>

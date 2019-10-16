@@ -1,0 +1,20 @@
+<h1>Tool Launch Successful</h1>
+<h4>Parameters Received:</h4>
+<ul>
+{{#each params}}
+
+    {{#ifObject this}}
+        <li>{{@key}} : {
+            <ul>
+                {{#each this}}
+                    <li>{{@key}} : {{this}}</li>
+                {{/each}}
+            </ul>
+            }
+        </li>
+    {{/ifObject}}
+    {{#notIfObject this}}
+        <li>{{@key}} : {{this}}</li>
+    {{/notIfObject}}
+{{/each}}
+</ul>
