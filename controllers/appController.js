@@ -50,7 +50,7 @@ exports.loginController = (req, res) => {
           "action": "create",
           "tool_id": "536"
         },
-        "iss": toolData.launch_url,
+        "iss": 'https://comprohighschool.moodlecloud.com',
         "sub": platform.client_id,
         "aud": "",
         "iat": Date.now(),
